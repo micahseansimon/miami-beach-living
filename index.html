@@ -1145,3 +1145,1088 @@ alert(
 
 </body>
 </html>
+    border:1.5px solid var(--gold);
+    border-bottom:none;
+    border-radius:320px 320px 0 0;
+    opacity:0.55;
+    pointer-events:none;
+  }
+  .arch::after{
+    content:'';
+    position:absolute;
+    top:14px; left:50%;
+    transform:translateX(-50%);
+    width:min(596px, 82vw);
+    height:126px;
+    border:1px solid var(--gold);
+    border-bottom:none;
+    border-radius:300px 300px 0 0;
+    opacity:0.35;
+    pointer-events:none;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    background:var(--ink);
+    padding:28px 6vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:18px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .brand img{
+    height:54px;
+    width:auto;
+    display:block;
+  }
+  .brand-text{
+    color:var(--gold-soft);
+    line-height:1.1;
+  }
+  .brand-text .name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.25rem;
+    letter-spacing:0.06em;
+    color:var(--gold-soft);
+  }
+  .brand-text .tag{
+    font-size:0.62rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-top:3px;
+  }
+  nav{
+    display:flex;
+    gap:34px;
+  }
+  nav a{
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--cream);
+    opacity:0.75;
+    transition:opacity 0.25s ease, color 0.25s ease;
+    padding-bottom:4px;
+    border-bottom:1px solid transparent;
+  }
+  nav a:hover{
+    opacity:1;
+    color:var(--gold);
+    border-bottom-color:var(--gold);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+  background:
+    linear-gradient(
+      rgba(21,25,31,0.72),
+      rgba(21,25,31,0.78)
+    ),
+    url('miami-beach-aerial.jpg');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  color: var(--cream);
+  padding: 120px 6vw 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+  .hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(212,162,78,0.12),
+      transparent 60%
+    );
+  pointer-events:none;
+}
+  .hero .skyline{
+    position:absolute;
+    bottom:0; left:0; right:0;
+    height:140px;
+    background:repeating-linear-gradient(
+      90deg,
+      transparent 0 60px,
+      rgba(212,162,78,0.06) 60px 64px
+    );
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .hero .wave{
+    position:absolute;
+    bottom:-2px; left:0; right:0;
+    height:90px;
+    background:linear-gradient(180deg, transparent, rgba(31,110,120,0.18));
+    clip-path: polygon(0% 60%, 8% 40%, 20% 65%, 35% 35%, 50% 60%, 65% 30%, 80% 58%, 92% 32%, 100% 55%, 100% 100%, 0% 100%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:760px;
+    margin:0 auto;
+    padding-top:60px;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.4rem);
+    line-height:1.08;
+    letter-spacing:0.01em;
+    margin:18px 0 22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold-soft);
+  }
+  .hero p.lead{
+    font-size:1.05rem;
+    line-height:1.8;
+    color:rgba(247,242,232,0.78);
+    max-width:520px;
+    margin:0 auto 38px;
+    font-weight:300;
+  }
+
+  .btn{
+    display:inline-block;
+    font-family:'Josefin Sans',sans-serif;
+    font-size:0.78rem;
+    letter-spacing:0.26em;
+    text-transform:uppercase;
+    padding:18px 42px;
+    border:1px solid var(--gold);
+    color:var(--gold-soft);
+    transition:all 0.3s ease;
+    position:relative;
+  }
+  .btn:hover{
+    background:var(--gold);
+    color:var(--ink);
+    letter-spacing:0.32em;
+  }
+  .btn-solid{
+    background:var(--gold);
+    color:var(--ink);
+    border-color:var(--gold);
+  }
+  .btn-solid:hover{
+    background:transparent;
+    color:var(--gold-soft);
+    letter-spacing:0.32em;
+  }
+
+  /* ---------- DIVIDER ---------- */
+  .divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    padding:6px 0 0;
+  }
+  .divider .line{
+    height:1px;
+    width:64px;
+    background:var(--gold);
+    opacity:0.5;
+  }
+  .divider .dot{
+    width:6px; height:6px;
+    border:1px solid var(--gold);
+    transform:rotate(45deg);
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{
+    padding:110px 6vw;
+  }
+  .section-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 64px;
+    padding-top:30px;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 4vw, 2.9rem);
+    margin:18px 0 16px;
+  }
+  .section-head p{
+    color:#5b5448;
+    font-size:0.98rem;
+    line-height:1.8;
+    font-weight:300;
+  }
+
+  /* ---------- CRITERIA GRID ---------- */
+  .criteria{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .criteria .card{
+    background:var(--cream);
+    padding:46px 30px;
+    text-align:center;
+    transition:background 0.35s ease;
+  }
+  .criteria .card:hover{
+    background:#FBF7EE;
+  }
+  .criteria .card .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:0.95rem;
+    color:var(--teal);
+    letter-spacing:0.06em;
+    margin-bottom:18px;
+  }
+  .criteria .card h3{
+    font-size:1.4rem;
+    margin-bottom:12px;
+  }
+  .criteria .card p{
+    font-size:0.86rem;
+    line-height:1.75;
+    color:#6b6356;
+    font-weight:300;
+  }
+
+  @media (max-width: 920px){
+    .criteria{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width: 560px){
+    .criteria{grid-template-columns:1fr;}
+  }
+
+  /* ---------- ABOUT / TRUST STRIP ---------- */
+  .trust{
+    background:var(--teal);
+    color:var(--cream);
+    padding:90px 6vw;
+    text-align:center;
+  }
+  .trust .eyebrow{color:var(--gold-soft);}
+  .trust h2{
+    font-size:clamp(1.9rem, 3.6vw, 2.6rem);
+    max-width:680px;
+    margin:18px auto 24px;
+    line-height:1.35;
+    font-style:italic;
+  }
+  .trust .meta{
+    font-size:0.8rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:rgba(247,242,232,0.7);
+  }
+  .stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-top:54px;
+    flex-wrap:wrap;
+  }
+  .stats .stat{
+    text-align:center;
+  }
+  .stats .stat .figure{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.6rem;
+    color:var(--gold-soft);
+  }
+  .stats .stat .label{
+    font-size:0.7rem;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:rgba(247,242,232,0.7);
+    margin-top:6px;
+  }
+
+  /* ---------- INQUIRY / CONTACT ---------- */
+  .inquiry{
+    background:var(--ink);
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .inquiry .skyline-bg{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(ellipse at 50% 110%, rgba(212,162,78,0.10), transparent 55%);
+    pointer-events:none;
+  }
+  .inquiry-inner{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    max-width:680px;
+    margin:0 auto;
+    padding-top:30px;
+  }
+  .inquiry h2{
+    font-size:clamp(2rem, 4vw, 2.9rem);
+    margin:18px 0 18px;
+    color:var(--cream);
+  }
+  .inquiry p{
+    color:rgba(247,242,232,0.75);
+    font-size:0.98rem;
+    line-height:1.85;
+    font-weight:300;
+    max-width:520px;
+    margin:0 auto 40px;
+  }
+  .inquiry-list{
+    display:flex;
+    justify-content:center;
+    gap:46px;
+    flex-wrap:wrap;
+    margin-bottom:48px;
+  }
+  .inquiry-list .item{
+    font-size:0.76rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .inquiry-list .item::before{
+    content:'';
+    width:8px;height:8px;
+    border:1px solid var(--gold);
+    transform:rotate(45deg);
+    display:inline-block;
+  }
+
+  .contact-card{
+    margin-top:60px;
+    border:1px solid var(--line);
+    padding:50px 40px;
+    background:rgba(212,162,78,0.04);
+  }
+  .contact-card .agent-name{
+    font-size:1.7rem;
+    color:var(--gold-soft);
+    margin-bottom:6px;
+  }
+  .contact-card .agent-role{
+    font-size:0.72rem;
+    letter-spacing:0.26em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:30px;
+  }
+  .contact-rows{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    margin-bottom:36px;
+  }
+  .contact-rows a{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.3rem;
+    letter-spacing:0.02em;
+    color:var(--cream);
+    border-bottom:1px solid transparent;
+    transition:color 0.25s ease, border-color 0.25s ease;
+    padding-bottom:4px;
+  }
+  .contact-rows a:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+  }
+  .contact-rows .label{
+    font-size:0.66rem;
+    letter-spacing:0.26em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:8px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    border-top:1px solid var(--line);
+    padding:38px 6vw;
+    text-align:center;
+  }
+  footer .brand{
+    justify-content:center;
+    margin-bottom:14px;
+  }
+  footer img{height:40px;}
+  footer .footer-affiliate{
+    margin:32px 0 28px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  footer .footer-affiliate .eyebrow{
+    margin-bottom:18px;
+  }
+  footer .affiliate-img{
+    height:auto;
+    width:min(320px, 80%);
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+  footer p{
+    font-size:0.7rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:rgba(247,242,232,0.45);
+  }
+
+  /* ---------- INQUIRY FORM ---------- */
+  .form-grid{
+    max-width:880px;
+    margin:0 auto;
+  }
+  .form-subhead{
+    font-size:0.7rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:60px 0 30px;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+  }
+  .form-subhead:first-of-type{margin-top:0;}
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-bottom:32px;
+  }
+  .field{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:32px;
+  }
+  .field-row .field{margin-bottom:0;}
+  .field label{
+    font-size:0.68rem;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:500;
+  }
+  .field label .req{color:var(--gold);}
+  .field input,
+  .field select,
+  .field textarea{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.15rem;
+    padding:10px 2px;
+    border:none;
+    border-bottom:1px solid var(--line);
+    background:transparent;
+    color:var(--ink);
+    outline:none;
+    transition:border-color 0.25s ease;
+    width:100%;
+  }
+  .field select{
+    appearance:none;
+    -webkit-appearance:none;
+    cursor:pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23D4A24E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 4px center;
+  }
+  .field textarea{
+    font-family:'Josefin Sans', sans-serif;
+    font-size:0.92rem;
+    line-height:1.8;
+    min-height:100px;
+    resize:vertical;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus{
+    border-color:var(--gold);
+  }
+  .field input::placeholder,
+  .field textarea::placeholder{
+    color:#b9b1a0;
+    font-family:'Josefin Sans', sans-serif;
+    font-size:0.85rem;
+  }
+
+  .pill-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .pill{
+    font-family:'Josefin Sans', sans-serif;
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    padding:11px 22px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--ink);
+    cursor:pointer;
+    transition:all 0.25s ease;
+    user-select:none;
+  }
+  .pill:hover{border-color:var(--gold);}
+  .pill.active{
+    background:var(--teal);
+    border-color:var(--teal);
+    color:var(--cream);
+  }
+
+  .form-submit{
+    text-align:center;
+    margin-top:56px;
+  }
+  .form-note{
+    margin-top:20px;
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:#9b9384;
+  }
+
+  .form-success{
+    display:none;
+    text-align:center;
+    max-width:540px;
+    margin:0 auto;
+    padding:70px 20px;
+  }
+  .form-success.visible{display:block;}
+  .form-success h3{
+    font-size:2rem;
+    margin-bottom:16px;
+  }
+  .form-success p{
+    color:#6b6356;
+    font-weight:300;
+    line-height:1.8;
+  }
+
+  @media (max-width: 700px){
+    .field-row{grid-template-columns:1fr;gap:0;}
+    .field-row .field{margin-bottom:32px;}
+  }
+
+
+  .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* focus visibility */
+  a:focus-visible, .btn:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="miami-beach-living-logo.png" alt="Miami Beach Living — Real Estate & Beyond">
+    <div class="brand-text">
+      <div class="name">Miami Beach Living</div>
+      <div class="tag">Real Estate &amp; Beyond</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#criteria">What We Find</a>
+    <a href="#about">About</a>
+    <a href="#intake">Inquiry Form</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner arch">
+    <p class="eyebrow">Real Estate &amp; Beyond</p>
+    <h1>Your next address<br>is closer than<br><em>you think.</em></h1>
+    <p class="lead">A curated approach to renting in Miami Beach and beyond — tell us what matters to you, and we'll bring the residences that fit.</p>
+    <a href="#intake" class="btn">Start Your Search</a>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<section id="intake">
+  <div class="section-head reveal arch">
+    <p class="eyebrow">Rental Inquiry</p>
+    <h2>Find your perfect rental</h2>
+    <p>Tell us about yourself and what you're looking for — we'll match you with the finest residences Miami Beach has to offer.</p>
+  </div>
+
+  <form class="form-grid reveal" id="rental-form">
+
+    <div class="form-subhead">Personal Information</div>
+    <div class="field-row">
+      <div class="field">
+        <label>First Name <span class="req">*</span></label>
+        <input type="text" name="first_name" required>
+      </div>
+      <div class="field">
+        <label>Last Name <span class="req">*</span></label>
+        <input type="text" name="last_name" required>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Email Address <span class="req">*</span></label>
+        <input type="email" name="email" placeholder="you@email.com" required>
+      </div>
+      <div class="field">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="(305) 000-0000">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Current City / State</label>
+        <input type="text" name="current_city" placeholder="e.g. New York, NY">
+      </div>
+      <div class="field">
+        <label>Preferred Contact Method</label>
+        <div class="pill-group" data-group="Preferred Contact Method" data-mode="single">
+          <div class="pill" data-value="Email">Email</div>
+          <div class="pill" data-value="Phone">Phone</div>
+          <div class="pill" data-value="Text">Text</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-subhead">Rental Preferences</div>
+    <div class="field">
+      <label>Preferred Neighborhoods</label>
+      <div class="pill-group" data-group="Preferred Neighborhoods" data-mode="multi">
+        <div class="pill" data-value="South Beach">South Beach</div>
+        <div class="pill" data-value="Mid-Beach">Mid-Beach</div>
+        <div class="pill" data-value="North Beach">North Beach</div>
+        <div class="pill" data-value="Brickell">Brickell</div>
+        <div class="pill" data-value="Wynwood">Wynwood</div>
+        <div class="pill" data-value="No preference">No Preference</div>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Lease Type</label>
+        <div class="pill-group" data-group="Lease Type" data-mode="single">
+          <div class="pill" data-value="Short-term">Short-term</div>
+          <div class="pill" data-value="Long-term">Long-term</div>
+          <div class="pill" data-value="Open to both">Open to Both</div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Property Type</label>
+        <div class="pill-group" data-group="Property Type" data-mode="single">
+          <div class="pill" data-value="Condo">Condo</div>
+          <div class="pill" data-value="Single Family">Single Family</div>
+          <div class="pill" data-value="Townhouse">Townhouse</div>
+          <div class="pill" data-value="55+">55+</div>
+          <div class="pill" data-value="No preference">No Preference</div>
+        </div>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Move-In Date</label>
+        <input type="date" name="move_in_date">
+      </div>
+      <div class="field">
+        <label>Desired Bedrooms</label>
+        <select name="bedrooms">
+          <option value="">Select...</option>
+          <option>Studio</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4+</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Monthly Budget — Min ($)</label>
+        <input type="number" name="budget_min" placeholder="2,500">
+      </div>
+      <div class="field">
+        <label>Monthly Budget — Max ($)</label>
+        <input type="number" name="budget_max" placeholder="3,500">
+      </div>
+    </div>
+    <div class="field">
+      <label>Must-Have Amenities</label>
+      <div class="pill-group" data-group="Must-Have Amenities" data-mode="multi">
+        <div class="pill" data-value="Furnished">Furnished</div>
+        <div class="pill" data-value="Pet-friendly">Pet-friendly</div>
+        <div class="pill" data-value="In-unit washer/dryer">In-unit Washer / Dryer</div>
+        <div class="pill" data-value="Gym/fitness center">Gym / Fitness Center</div>
+      </div>
+    </div>
+
+    <div class="form-subhead">Background &amp; Qualification</div>
+    <div class="field-row">
+      <div class="field">
+        <label>Employment Status</label>
+        <select name="employment_status">
+          <option value="">Select...</option>
+          <option>Employed (W-2)</option>
+          <option>Self-Employed</option>
+          <option>Retired</option>
+          <option>Student</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Annual Household Income</label>
+        <select name="household_income">
+          <option value="">Select...</option>
+          <option>Under $75,000</option>
+          <option>$75,000 – $125,000</option>
+          <option>$125,000 – $200,000</option>
+          <option>$200,000+</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Credit Score Range</label>
+        <select name="credit_score">
+          <option value="">Select...</option>
+          <option>Below 600</option>
+          <option>600 – 679</option>
+          <option>680 – 739</option>
+          <option>740+</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Adults</label>
+        <input type="number" name="adults" min="1" value="1">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Children</label>
+        <input type="number" name="children" min="0" value="0">
+      </div>
+      <div class="field">
+        <label>Pets</label>
+        <div class="pill-group" data-group="Pets" data-mode="single">
+          <div class="pill" data-value="None">None</div>
+          <div class="pill" data-value="Yes">Yes</div>
+        </div>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Working With Another Agent?</label>
+        <div class="pill-group" data-group="Working With Another Agent" data-mode="single">
+          <div class="pill" data-value="No">No</div>
+          <div class="pill" data-value="Yes">Yes</div>
+        </div>
+      </div>
+      <div class="field">
+        <label>How Did You Find Us?</label>
+        <div class="pill-group" data-group="How Did You Find Us" data-mode="single">
+          <div class="pill" data-value="Google">Google</div>
+          <div class="pill" data-value="Instagram">Instagram</div>
+          <div class="pill" data-value="Referral">Referral</div>
+          <div class="pill" data-value="Zillow">Zillow</div>
+          <div class="pill" data-value="Other">Other</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-subhead">Urgency &amp; Additional Notes</div>
+    <div class="field">
+      <label>How Soon Are You Looking to Move?</label>
+      <div class="pill-group" data-group="Move Timeline" data-mode="single">
+        <div class="pill" data-value="ASAP">ASAP</div>
+        <div class="pill" data-value="1-4 wks">1–4 Weeks</div>
+        <div class="pill" data-value="1-2 mo">1–2 Months</div>
+        <div class="pill" data-value="3+ mo">3+ Months</div>
+        <div class="pill" data-value="Browsing">Just Browsing</div>
+      </div>
+    </div>
+    <div class="field" style="margin-bottom:0;">
+      <label>Anything Else We Should Know?</label>
+      <textarea name="notes" placeholder="Special requirements, questions, or anything that helps us find your ideal home..."></textarea>
+    </div>
+
+    <div class="form-submit">
+      <button type="submit" class="btn btn-solid">Submit Inquiry</button>
+      <p class="form-note">&#128274; Your information is kept confidential and never shared with third parties.</p>
+    </div>
+  </form>
+
+  <div class="form-success" id="form-success">
+    <h3 class="serif">Thank you, <span id="success-name"></span>.</h3>
+    <p>Your inquiry is on its way. Carmen will be in touch shortly to help find your perfect rental.</p>
+  </div>
+</section>
+
+
+
+
+
+<section id="criteria">
+  <div class="section-head reveal arch">
+    <p class="eyebrow">The Process</p>
+    <h2>Tell us what you're looking for</h2>
+    <p>Every search starts with a conversation. These are the details that help us narrow the field — from neighborhood to move-in date.</p>
+  </div>
+
+  <div class="criteria reveal">
+    <div class="card">
+      <div class="num">Neighborhood</div>
+      <h3>Where</h3>
+      <p>South Beach, Mid-Beach, North Beach, Brickell, Wynwood — or somewhere we haven't suggested yet.</p>
+    </div>
+    <div class="card">
+      <div class="num">Lease &amp; Type</div>
+      <h3>What</h3>
+      <p>Short-term or long-term, condo, single family, townhouse, or 55+ community — we match the lease to the life.</p>
+    </div>
+    <div class="card">
+      <div class="num">Budget &amp; Layout</div>
+      <h3>How Much</h3>
+      <p>Monthly range, bedroom count, and the amenities that make a place feel like home — furnished, pet-friendly, in-unit laundry, and more.</p>
+    </div>
+    <div class="card">
+      <div class="num">Timeline</div>
+      <h3>When</h3>
+      <p>Moving this week or browsing for next season — we tailor the pace of the search to yours.</p>
+    </div>
+  </div>
+</section>
+
+<div class="trust" id="about">
+  <p class="eyebrow reveal">South Florida's Finest</p>
+  <h2 class="reveal">"Experience, integrity, and results — applied to every search, from the first call to the keys in hand."</h2>
+  <p class="meta reveal">South Florida's Finest Realty Corp &middot; Miami Beach Living</p>
+  <div class="stats reveal">
+    <div class="stat">
+      <div class="figure">5</div>
+      <div class="label">Neighborhoods Covered</div>
+    </div>
+    <div class="stat">
+      <div class="figure">100%</div>
+      <div class="label">Confidential Inquiries</div>
+    </div>
+    <div class="stat">
+      <div class="figure">24/7</div>
+      <div class="label">Response Window</div>
+    </div>
+  </div>
+</div>
+
+<section class="inquiry" id="contact">
+  <div class="skyline-bg"></div>
+  <div class="inquiry-inner arch reveal">
+    <p class="eyebrow">Get In Touch</p>
+    <h2>Let's find your<br>perfect rental.</h2>
+    <p>Reach out directly — by phone or email — and we'll send over our full rental inquiry form to get the search started.</p>
+
+    <div class="inquiry-list">
+      <span class="item">Neighborhoods</span>
+      <span class="item">Lease Type</span>
+      <span class="item">Budget</span>
+      <span class="item">Move-In Date</span>
+    </div>
+
+    <div class="contact-card">
+      <div class="agent-name">Carmen Zaldivar</div>
+      <div class="agent-role">Miami Beach Living &middot; Real Estate &amp; Beyond</div>
+      <div class="contact-rows">
+        <div>
+          <div class="label">Phone</div>
+          <a href="tel:+17863706643">786&middot;370&middot;6643</a>
+        </div>
+        <div>
+          <div class="label">Email</div>
+          <a href="mailto:carmen@miamibeach-living.com">carmen@miamibeach-living.com</a>
+        </div>
+      </div>
+      <a href="mailto:carmen@miamibeach-living.com" class="btn btn-solid">Email Carmen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">
+    <img src="miami-beach-living-logo.png" alt="Miami Beach Living">
+  </div>
+  <div class="footer-affiliate reveal">
+    <p class="eyebrow">A South Florida's Finest Realty Corp Brand</p>
+    <img src="south-florida-finest-realty.jpeg" alt="South Florida's Finest Realty Corp" class="affiliate-img">
+  </div>
+  <p>&copy; 2026 Miami Beach Living &mdash; Real Estate &amp; Beyond. All rights reserved.</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ---------- PILL GROUPS ----------
+  document.querySelectorAll('.pill-group').forEach(group => {
+    const mode = group.dataset.mode;
+    group.querySelectorAll('.pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        if(mode === 'single'){
+          group.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+        } else {
+          pill.classList.toggle('active');
+        }
+      });
+    });
+  });
+
+  // ---------- FORM SUBMIT ----------
+
+
+
+  
+  const rentalForm = document.getElementById('rental-form');
+  if(rentalForm){
+    rentalForm.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const fieldLabels = {
+        first_name: 'First Name',
+        last_name: 'Last Name',
+        email: 'Email',
+        phone: 'Phone',
+        current_city: 'Current City / State',
+        move_in_date: 'Move-In Date',
+        bedrooms: 'Desired Bedrooms',
+        budget_min: 'Budget Min',
+        budget_max: 'Budget Max',
+        employment_status: 'Employment Status',
+        household_income: 'Annual Household Income',
+        credit_score: 'Credit Score Range',
+        adults: 'Adults',
+        children: 'Children',
+        notes: 'Additional Notes'
+      };
+
+      let lines = [];
+      const data = new FormData(rentalForm);
+      for(const [key, value] of data.entries()){
+        if(value && fieldLabels[key]){
+          lines.push(`${fieldLabels[key]}: ${value}`);
+        }
+      }
+      document.querySelectorAll('.pill-group').forEach(group => {
+        const groupName = group.dataset.group;
+        const selected = [...group.querySelectorAll('.pill.active')].map(p => p.dataset.value);
+        if(selected.length){
+          lines.push(`${groupName}: ${selected.join(', ')}`);
+        }
+      });
+
+      const firstName = rentalForm.first_name.value || 'there';
+      document.getElementById('success-name').textContent = firstName;
+      rentalForm.style.display = 'none';
+      document.getElementById('form-success').classList.add('visible');
+
+      const firstName = rentalForm.first_name.value || 'there';
+
+let submissionData = {};
+
+// Collect normal form fields
+for (const [key, value] of data.entries()) {
+submissionData[key] = value;
+}
+
+// Collect all selected pill buttons
+document.querySelectorAll('.pill-group').forEach(group => {
+const groupName = group.dataset.group;
+
+const selected = [
+...group.querySelectorAll('.pill.active')
+].map(p => p.dataset.value);
+
+submissionData[groupName] = selected.join(', ');
+});
+
+// Send to Google Sheets
+fetch(
+"https://script.google.com/macros/s/AKfycbxSqMqwX9hn9rP0RFSSIo_YEezLvPSMpDjsPVjVqX6o-3egwCwoEsoUIDfKaILx1mEvxA/exec",
+{
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(submissionData)
+}
+)
+.then(res => res.json())
+.then(result => {
+
+document.getElementById('success-name').textContent = firstName;
+
+rentalForm.style.display = 'none';
+
+document
+.getElementById('form-success')
+.classList
+.add('visible');
+
+})
+.catch(error => {
+console.error(error);
+
+alert(
+"There was a problem submitting your inquiry."
+);
+});
+
+    });
+  }
+
+  
+</script>
+
+</body>
+</html>
