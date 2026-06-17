@@ -156,6 +156,18 @@
   position: relative;
   overflow: hidden;
 }
+  .hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(212,162,78,0.12),
+      transparent 60%
+    );
+  pointer-events:none;
+}
   .hero .skyline{
     position:absolute;
     bottom:0; left:0; right:0;
