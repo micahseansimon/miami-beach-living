@@ -1089,7 +1089,35 @@
         `New Rental Inquiry — ${rentalForm.first_name.value} ${rentalForm.last_name.value}`.trim()
       );
       const body = encodeURIComponent(lines.join('\n'));
-      window.location.href = `mailto:carmen@miamibeach-living.com?subject=${subject}&body=${body}`;
+      fetch(
+  "https://script.google.com/macros/s/AKfycbxSqMqwX9hn9rP0RFSSIo_YEezLvPSMpDjsPVjVqX6o-3egwCwoEsoUIDfKaILx1mEvxA/exec",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type":
+        "application/json"
+    },
+    body: JSON.stringify(
+      Object.fromEntries(data)
+    )
+  }
+)
+.then(res => res.json())
+.then(result => {
+
+  rentalForm.style.display = "none";
+
+  document
+    .getElementById("form-success")
+    .classList
+    .add("visible");
+
+})
+.catch(error => {
+  alert(
+    "There was a problem submitting your inquiry."
+  );
+});
     });
   }
 
