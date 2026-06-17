@@ -1085,39 +1085,58 @@
       rentalForm.style.display = 'none';
       document.getElementById('form-success').classList.add('visible');
 
-      const subject = encodeURIComponent(
-        `New Rental Inquiry — ${rentalForm.first_name.value} ${rentalForm.last_name.value}`.trim()
-      );
-      const body = encodeURIComponent(lines.join('\n'));
-      fetch(
-  "https://script.google.com/macros/s/AKfycbxSqMqwX9hn9rP0RFSSIo_YEezLvPSMpDjsPVjVqX6o-3egwCwoEsoUIDfKaILx1mEvxA/exec",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type":
-        "application/json"
-    },
-    body: JSON.stringify(
-      Object.fromEntries(data)
-    )
-  }
+      const firstName = rentalForm.first_name.value || 'there';
+
+let submissionData = {};
+
+// Collect normal form fields
+for (const [key, value] of data.entries()) {
+submissionData[key] = value;
+}
+
+// Collect all selected pill buttons
+document.querySelectorAll('.pill-group').forEach(group => {
+const groupName = group.dataset.group;
+
+const selected = [
+...group.querySelectorAll('.pill.active')
+].map(p => p.dataset.value);
+
+submissionData[groupName] = selected.join(', ');
+});
+
+// Send to Google Sheets
+fetch(
+"https://script.google.com/macros/s/AKfycbxSqMqwX9hn9rP0RFSSIo_YEezLvPSMpDjsPVjVqX6o-3egwCwoEsoUIDfKaILx1mEvxA/exec",
+{
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(submissionData)
+}
 )
 .then(res => res.json())
 .then(result => {
 
-  rentalForm.style.display = "none";
+document.getElementById('success-name').textContent = firstName;
 
-  document
-    .getElementById("form-success")
-    .classList
-    .add("visible");
+rentalForm.style.display = 'none';
+
+document
+.getElementById('form-success')
+.classList
+.add('visible');
 
 })
 .catch(error => {
-  alert(
-    "There was a problem submitting your inquiry."
-  );
+console.error(error);
+
+alert(
+"There was a problem submitting your inquiry."
+);
 });
+
     });
   }
 
